@@ -1,0 +1,162 @@
+body {
+	font-family: 'poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+	box-sizing: border-box;
+}
+
+header {
+	background: #333;
+	color: #fff;
+	padding: 10px 0;
+	text-align: center;
+
+	nav ul {
+		list-style: none;
+		padding: 0;
+
+		li {
+			display: inline;
+			margin: 0 15px;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
+main {
+	padding: 20px;
+	background-color: #d7d7d7;
+
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		justify-content: space-around;
+		transition: all 0.55s ease;
+
+		@media (max-width: 530px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		div {
+			background-color: #d7d7d7;
+			padding: 15px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 30%;
+			text-align: center;
+			transition: all 0.55s ease;
+			position: relative;
+
+			.user-details {
+				font-size: 12px;
+				right: 25%;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.55s ease, visibility 0.55s ease;
+			}
+
+			&:hover {
+				transform: scale(1.1);
+
+				.user-details {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			@media (max-width: 530px) {
+				padding: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+#configForm {
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+}
+
+.btn {
+	cursor: pointer;
+	color: white;
+	background-color: #007000;
+	border: none;
+	padding: 0.3rem 0.4rem;
+	transition: all 0.55s ease;
+	text-transform: uppercase;
+	font-weight: bold;
+	max-width: 150px;
+
+	&:hover {
+		background-color: #094a25;
+	}
+}
+
+.red {
+	background-color: #d2222d;
+	transition: all 0.55s ease;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+
+	&:hover {
+		background-color: #bc2023;
+	}
+}
+
+.green {
+	background-color: #007000;
+	transition: all 0.55s ease;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	transition: all 0.55s ease;
+}
+
+.dark-mode {
+	background-color: rgb(68, 68, 68);
+	color: rgb(243, 243, 243);
+
+	header {
+		background-color: #333;
+	}
+
+	section {
+		background-color: #4e4e4e;
+	}
+
+	.card {
+		background-color: rgb(107, 107, 107);
+	}
+
+	main {
+		background-color: #222;
+	}
+}
+
+section {
+	margin-bottom: 20px;
+	padding: 15px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+	text-align: center;
+	padding: 15px 0;
+	background: #333;
+	color: #fff;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}

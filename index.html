@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="./script.js" defer></script>
+		<title>Dashboard Simples</title>
+	</head>
+	<body>
+		<header>
+			<h1>Dashboard Simples</h1>
+			<nav>
+				<ul>
+					<li><a href="#home">Início</a></li>
+					<li><a href="#relatorios">Relatórios</a></li>
+					<li><a href="#configuracoes">Configurações</a></li>
+					<li><a href="#perfil">Perfil</a></li>
+				</ul>
+				<label> <input type="checkbox" id="theme-switch" /> Modo Escuro </label>
+			</nav>
+		</header>
+
+		<main>
+			<section id="home">
+				<h2>Bem-vindo ao Dashboard</h2>
+				<div class="cards">
+					<div class="card">
+						<h3>Usuários Ativos</h3>
+						<p>150</p>
+						<p class="user-details green">Crescimento de 23% desde ontem</p>
+					</div>
+					<div class="card">
+						<h3>Vendas Hoje</h3>
+						<p>30</p>
+						<p class="user-details red">Queda de 5% desde ontem</p>
+					</div>
+					<div class="card">
+						<h3>Feedbacks Recebidos</h3>
+						<p>12</p>
+						<p class="user-details green">Crescimento de 68% desde ontem</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="relatorios">
+				<h2>Relatórios</h2>
+				<p>Selecione um relatório para visualizar:</p>
+				<select id="relatorio-select">
+					<option value="">Selecione...</option>
+					<option value="vendas">Vendas</option>
+					<option value="usuarios">Usuários</option>
+				</select>
+				<button
+					type="button"
+					id="gerar-relatorio"
+					class="btn"
+					title="Clique para criar um relatório"
+				>
+					Criar Relatório
+				</button>
+				<div class="report-output"></div>
+				<div id="feedback-message" style="margin-top: 10px"></div>
+			</section>
+
+			<section id="configuracoes">
+        <h2>Configurações</h2>
+        <form id="configForm">
+          <div>
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+          </div>
+          <div>
+            <label for="senha">Senha:</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Salvar Configurações</button>
+          <button type="button" id="cancelar-config" class="btn red">
+            Cancelar
+          </button>
+        </form>
+        <div id="feedback-config" style="display: none; margin-top: 10px"></div>
+      </section>
+
+			<section id="perfil">
+				<h2>Perfil do Usuário</h2>
+				<p>Nome: <span id="usuario-nome">João Silva</span></p>
+				<p>E-mail: <span id="usuario-email">joao@exemplo.com</span></p>
+				<button type="button" class="btn">Editar Perfil</button>
+			</section>
+
+			<section id="ajuda">
+				<h2>Ajuda</h2>
+				<p>Para mais informações, consulte a documentação.</p>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; 2024 Dashboard Simples</p>
+		</footer>
+	</body>
+</html>
